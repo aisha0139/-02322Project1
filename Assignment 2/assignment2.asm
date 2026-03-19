@@ -21,7 +21,8 @@ readS
         ADD R3, R2, R2     ; 4 * first digit
         ADD R3, R3, R3     ; 8 * first digit
         ADD R4, R3, R2     ; 10 * first digit
-        
+        ADD R0, R4, R0     ; Add second digit to 10 * first digit, final result in R0
+
         RET ; return to main 
 
 OFFSET  .FILL #-48 ;  ASCII offset for converting a character digit into an integer
